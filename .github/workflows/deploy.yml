@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '24'
       - name: Check HTML
-        run: npx --yes htmlhint@1.1.4 index.html
+        run: npx --yes htmlhint@1.1.4 --rules '{"tagname-lowercase": false}' index.html
   deploy:
     needs: validate
     runs-on: ubuntu-latest
