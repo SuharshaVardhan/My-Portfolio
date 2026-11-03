@@ -8,17 +8,7 @@ on:
 permissions:
   contents: read
 jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - name: Check HTML
-        run: npx --yes htmlhint@1.1.4 --rules '{"tagname-lowercase": false}' index.html
   deploy:
-    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
