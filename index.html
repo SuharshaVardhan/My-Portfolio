@@ -392,6 +392,22 @@ footer{background:#fafafa!important;color:#666!important;border-top:1px solid #e
 #projects .motion-projects>.project:first-child{grid-column:auto!important;min-height:0!important}
 #projects .motion-projects>.project .case-visual{height:225px!important;min-height:225px!important;flex-basis:225px!important}
 @media(max-width:700px){#projects .motion-projects{grid-template-columns:minmax(0,1fr)!important}#projects .motion-projects>.project .case-visual{height:210px!important;min-height:210px!important;flex-basis:210px!important}}
+
+/* Mobile sticky header: reserve a visible brand row instead of overlapping absolute actions */
+@media(max-width:800px){
+ .nav{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:center!important;flex-wrap:nowrap!important;gap:7px!important;height:auto!important;min-height:96px!important;padding:11px 0 12px!important}
+ .nav>.logo{display:block!important;position:relative!important;z-index:2!important;flex:none!important;align-self:flex-start!important;width:auto!important;max-width:100%!important;white-space:nowrap!important;font-size:clamp(18px,5.2vw,23px)!important;line-height:1.2!important;opacity:1!important;visibility:visible!important;color:#262626!important}
+ .nav>.logo span{color:#ff5e1f!important}
+ .nav>.links{display:flex!important;position:relative!important;inset:auto!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;z-index:2!important;align-self:stretch!important;justify-content:flex-end!important;align-items:center!important;flex-wrap:nowrap!important;gap:9px!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+ .nav .resume-menu{order:0!important;flex:0 0 auto}
+ .nav .links>a.nav-cta{order:1!important;flex:0 0 auto}
+ .nav .resume-trigger,.nav .links>a.nav-cta{font-size:11px!important;line-height:1.35!important;padding:9px 12px!important;white-space:nowrap!important}
+ .nav:before{background:#fffffff7!important}
+}
+@media(max-width:380px){
+ .nav>.logo{font-size:18px!important}
+ .nav .resume-trigger,.nav .links>a.nav-cta{font-size:10px!important;padding:8px 9px!important}
+}
 </style>
 </head>
 <body><div class="scroll-progress" aria-hidden="true"></div>
